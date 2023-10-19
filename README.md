@@ -39,6 +39,7 @@ pip install -r requirements.txt
 To start processing of the MD trajectory, please, see the github page for the relevant type of calculations:
 
 1) [Translational diffusion coefficient Dtr](translational_diffusion/README.md)
+2) [Rotational diffusion coefficient Drot](rotational_diffusion/README.md)
 
 </div>
 
