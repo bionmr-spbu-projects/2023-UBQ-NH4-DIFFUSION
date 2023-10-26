@@ -7,8 +7,8 @@ from process_utils.fit import linear_fit
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Linear fit of the mean square displacement (MSD) curve')
-    parser.add_argument('--path-to-msd-csv', required=True)
-    parser.add_argument('--output-directory', default=".")
+    parser.add_argument('--path-to-msd-csv', help="set path to msd.csv with header [time_ns,msd]", required=True)
+    parser.add_argument('--output-directory',  help="set output directory", default=".")
     args = parser.parse_args()
 
     df = pd.read_csv(args.path_to_msd_csv)

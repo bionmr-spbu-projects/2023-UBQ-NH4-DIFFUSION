@@ -5,7 +5,18 @@ import os
 from .fit import linear_fit
 
 
-def plot_msd_with_fit(path_to_msd_csv, path_to_fit_msd_csv, output_directory):
+def plot_msd_with_fit(path_to_msd_csv: str,
+                      path_to_fit_msd_csv: str,
+                      output_directory: str
+                      ) -> None:
+    """
+    This script saves the figure of MSD curve and its linear fit
+
+    :param path_to_msd_csv:
+    :param path_to_fit_msd_csv:
+    :param output_directory:
+    :return:
+    """
     df_msd = pd.read_csv(path_to_msd_csv)
     df_msd = df_msd[df_msd.time_ns < 3]
     fit = pd.read_csv(path_to_fit_msd_csv)
