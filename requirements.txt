@@ -1,0 +1,7 @@
+matplotlib==3.8.0
+numpy==1.26.0
+pandas==2.1.1
+pyxmolpp2==2.0.2
+pyxmolpp2-stubs==0.0.8
+scipy==1.11.3
+tqdm==4.66.1
