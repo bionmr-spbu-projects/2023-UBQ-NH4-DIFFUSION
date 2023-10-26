@@ -10,7 +10,7 @@ clean:
 figures/overall_tumbling.png: ${SCRIPT_DIR}/03_plot_tumbling_correlation_function.py data/fit.csv
 	python3 $< \
 		--path-to-fit=data/fit.csv \
-		--path-to-acorrs=data/tumbling_acorr_avg.csv \
+		--path-to-tumbling-acorr-csv=data/tumbling_acorr_avg.csv \
 		--output-directory=figures \
 
 data/fit.csv: ${SCRIPT_DIR}/02_fit_tumbling_correlation_function.py data/tumbling_acorr_avg.csv

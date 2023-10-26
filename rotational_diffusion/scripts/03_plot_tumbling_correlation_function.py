@@ -10,4 +10,4 @@ if __name__ == "__main__":
                         required=True)
     parser.add_argument("--output-directory", help="set output directory", default=".")
     args = parser.parse_args()
-    plot_acorr_fit(args.path_to_fit, args.path_to_acorrs, args.output_directory)
+    plot_acorr_fit(args.path_to_fit, args.path_to_tumbling_acorr_csv, args.output_directory)
