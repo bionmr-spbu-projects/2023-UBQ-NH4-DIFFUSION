@@ -1,8 +1,8 @@
 <div align="justify">
 
-# nucleosome-trajectory-processing
+# Calculation of diffusion coefficients (Dtr, Drot) from MD trajectories
 
-This repository contains the scripts and example data for calculation of translational and rotational diffusion
+This repository contains the scripts and sample data for calculation of translational and rotational diffusion
 coefficients from MD trajectory
 
 ### System requirements
@@ -17,8 +17,9 @@ Key packages and programs:
 
 ### Installation dependencies
 
-The key package for analysis of MD trajectory is in-house python
-library [pyxmolpp2](https://sizmailov.github.io/pyxmolpp2/api/python/install.html)
+The key package to analyze an MD trajectory is the python
+library [pyxmolpp2](https://sizmailov.github.io/pyxmolpp2/api/python/install.html) 
+written in-house
 
 ```code-block:: bash
 # install system dependencies
@@ -34,9 +35,9 @@ pip install -U setuptools wheel pip
 pip install -r requirements.txt
 ```
 
-### Run MD analysis
+### Run MD analyses
 
-To start processing of the MD trajectory, please, see the github page for the relevant type of calculations:
+Please, see github pages for the relevant type of calculations:
 
 1) [Translational diffusion coefficient Dtr](translational_diffusion/README.md)
 2) [Rotational diffusion coefficient Drot](rotational_diffusion/README.md)
