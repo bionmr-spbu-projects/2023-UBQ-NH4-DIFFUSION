@@ -53,10 +53,10 @@ def plot_acorr_fit(path_to_fit_csv, path_to_csv_acorr, path_to_output):
         ax.set_ylim(-0.1, 1.1)
         ax.set_xlim(-0.1, 4)
         ax.set_xlabel('time, ns', fontsize=13)
-        ax.set_ylabel('autocorrelation', fontsize=13)
+        ax.set_ylabel(r'$g(\tau)$', fontsize=13)
         ax.plot(df.time_ns, df.acorr)
         ax.plot(df.time_ns, mono_exp(df.time_ns, **popt))
-        ax.axvline(limit, color='g', linestyle='--', label="fit limit %s" % (limit))
+        ax.axvline(limit, color='g', linestyle='--')
         ax.grid(True)
 
         os.makedirs(path_to_output, exist_ok=True)

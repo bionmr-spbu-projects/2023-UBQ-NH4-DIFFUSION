@@ -30,8 +30,9 @@ def plot_msd_with_fit(path_to_msd_csv: str,
             label="D = {:.3e} $m^2/s$".format(fit["b"][0] * 1e-10 ** 2 / 1e-9 / 6))
 
     ax.set_xlabel('time, ns', fontsize=13)
-    ax.set_ylabel('msd, A^2', fontsize=13)
-    ax.set_title('Mean square displacement center mass (msd)')
+    ax.set_ylabel(r'MSD, $\AA^2$', fontsize=13)
+    ax.axvline(1, color='g', linestyle='--')
     ax.grid(True)
+    ax.legend()
     plt.savefig(os.path.join(output_directory, "fit_msd_plot.png"))
     plt.close()
