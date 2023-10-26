@@ -7,9 +7,10 @@ from scipy.optimize import curve_fit
 from process_utils.fit import exponential_fit
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description='fit CH3 autocorr')
-    parser.add_argument('--path-to-tumbling-acorr-csv', required=True)
-    parser.add_argument('--output-directory', default="./")
+    parser = argparse.ArgumentParser(description='fit tumbling autocorrelation function')
+    parser.add_argument('--path-to-tumbling-acorr-csv',
+                        help="set path to tumbling_acorr_avg.csv with header [time_ns,acorr]", required=True)
+    parser.add_argument('--output-directory', help="set output directory", default=".")
 
     args = parser.parse_args()
 
