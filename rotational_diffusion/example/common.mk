@@ -1,7 +1,7 @@
 ## 1. change the path to SCRIPT_DIR according to your directory tree
 SCRIPT_DIR:=../../../2023-UBQ-NH4-DIFFUSION/rotational_diffusion/scripts/
 
-## secify file with vectors (emulating N-HN bonds) with near-uniform distribution on a unit sphere
+## specify file with vectors (emulating N-HN bonds) with near-uniform distribution on a unit sphere
 ## Here, we used 64 vectors downloaded from http://www.personal.soton.ac.uk/jf1w07/nodes/nodes.html
 NODES_PATH:="${SCRIPT_DIR}/../data/64_nodes.csv"
 
