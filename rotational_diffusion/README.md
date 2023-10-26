@@ -54,4 +54,6 @@ Because the trajectory is so short the results are moot and should not be compar
    make
 ```
 
+See the [example_output](example_output)
+
 </div>
