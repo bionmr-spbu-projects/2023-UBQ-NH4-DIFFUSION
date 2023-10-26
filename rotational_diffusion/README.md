@@ -7,7 +7,7 @@
 The processing of the MD trajectory includes the following steps:
 
 1) superpose (via the secondary-structure Cα atoms) the molecules from all MD frames onto the Ub molecule from the
-   first frame.
+   first frame
 
 2) parameterize the above superposition operations via rotation matrices
 
@@ -23,19 +23,19 @@ The processing of the MD trajectory includes the following steps:
   <img src="figures/auto-correlation_func.png">
 </p>
 
-6) combine the correlation functions from all 64 vectors, including the prescribed integration
-weights, to obtain G(τ)
+where P2(x) is the second-order Legendre polynomial, χ(tj,tj + τ) is the angle between the N-HN vector’s
+orientations at points in time tj and tj + τ, averaging is over n pairs of time points separated by the interval τ.
 
 7) fit G(τ) to a mono-exponential function to determine the tumbling time τrot and subsequently
 calculate Drot = 1 / (6τrot). Similar to the treatment of translational diffusion, it is important to
 carefully select the fitting interval. We have investigated this aspect in some depth using long MD and
-BD (Brownian dynamics) simulations of ubiquitin (not shown) and concluded that the most accurate
-results are obtained when using the fitting interval [0, 2 ns].
+BD (Brownian dynamics) simulations of ubiquitin (not shown) and concluded that <ins> in this specific case </ins> the most accurate
+results are obtained when using the fitting interval [0, 2 ns] 
 
 
 ### Run scripts
 
-The scripts for calculation of translational diffusion coefficient Dtr were assembeled into a pipeline using make
+The scripts for calculation of rotational diffusion coefficient Drot were assembeled into a pipeline using make
 utility. To process your own trajectory, you need to:
 
 1) copy the template [analysis_template](analysis_template)
@@ -44,11 +44,12 @@ utility. To process your own trajectory, you need to:
 
 ### Run tests
 
-We provide the templates to analyze short 10-ns trajectory of ubiquitin (UBQ) recorded with Amber package. Of note, the
-results are for demonstration purpose only and cannot be used for interpretation of Drot of UBQ.
+We provide the templates to analyze short 10-ns trajectory of ubiquitin (UBQ) recorded using the programm Amber. 
+The purpose is to make sure that all scripts run properly. 
+Because the trajectory is so short the results are moot and should not be compared with the experiment.
 
 ```code-block:: bash
-   # run the script to extract Dtr
+   # run the script to extract Drot
    cd example
    make
 ```
